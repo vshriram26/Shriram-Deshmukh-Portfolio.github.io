@@ -8,48 +8,6 @@ This is Shriram Deshmukh's professional portfolio showcasing projects, skills, e
 
 🌐 **Live Site**: [https://vshriram26.github.io/Shriram-Deshmukh-Portfolio.github.io/](https://vshriram26.github.io/Shriram-Deshmukh-Portfolio.github.io/)
 
-## Deployment Instructions
-
-### Prerequisites
-- Node.js installed
-- Git installed
-- GitHub account
-
-### Local Development
-```bash
-npm install
-npm start
-```
-
-### Deploy to GitHub Pages
-1. Install Git if not already installed
-2. Run the deployment script:
-   ```bash
-   ./deploy.bat
-   ```
-   
-   Or manually:
-   ```bash
-   git add .
-   git commit -m "Deploy to GitHub Pages"
-   git push origin main
-   npm run deploy
-   ```
-
-### GitHub Pages Setup
-1. Go to your repository settings
-2. Navigate to "Pages" section
-3. Select "Deploy from a branch" 
-4. Choose "gh-pages" branch
-5. Set folder to "/ (root)"
-6. Save the settings
-
-The site will be automatically deployed via GitHub Actions whenever you push to the main branch.
-
-**This template is free to use, and no attribution is required.** You can fork or download this repository to customize it for your own use. Please don't forget to leave a ⭐ if you like this portfolio!
-
-![screenshot](./src/assets//images/screenshot.png)
-
 ## Features
 
 ✅ Open source (free to use, no attribution required)  
@@ -60,68 +18,43 @@ The site will be automatically deployed via GitHub Actions whenever you push to 
 
 ## Quick Setup
 
-1. Ensure you have [Node.js](https://nodejs.org/) installed. Check your installation by running:
-
+1. Ensure you have [Node.js](https://nodejs.org/) installed:
     ```bash
     node -v
     ```
 
-2. In the project directory, install dependencies:
-
+2. Install dependencies:
     ```bash
     npm install
     ```
 
-3. Start the development server:
-
+3. Start development server:
     ```bash
     npm start
     ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
+4. Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-5. Customize the template by navigating to the `/src/components` directory. Modify texts, pictures, and other information as needed.
+## Deployment to GitHub Pages
 
-The page will reload if you make edits, and you will see any lint errors in the console.
+### Prerequisites
+- Node.js installed
+- Git installed
+- GitHub account
 
-If you are interested in creating a mockup image like the ones from the personal projects section, I recommend [Genmoo](https://gemoo.com/tools/browser-mockup-generator/). This website lets you generate sleek looking browser mockups for free.
+### Deploy Commands
+```bash
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push origin main
+npm run deploy
+```
 
-## Deployment
+### GitHub Pages Setup
+1. Go to repository settings
+2. Navigate to "Pages" section
+3. Select "Deploy from a branch" 
+4. Choose "gh-pages" branch
+5. Save the settings
 
-You can choose your preferred service (e.g., [Netlify](https://www.netlify.com/), [Render](https://render.com/), [Heroku](https://www.heroku.com/)) for deployment. One of the easiest ways to host this portfolio is using GitHub Pages. Follow the instructions below for a production deploy.
-
-1. **Set Up GitHub Repository**
-
-    Create a new repository on GitHub for your portfolio app.
-
-2. **Configure `package.json`**
-
-    Edit the following properties in your `package.json` file:
-
-    ```json
-    {
-        "homepage": "https://yourusername.github.io/your-repo-name",
-        "scripts": {
-            "predeploy": "npm run build",
-            "deploy": "gh-pages -d build",
-            ...
-        }
-    }
-    ```
-
-    Replace `yourusername` with your GitHub username and `your-repo-name` with the name of your GitHub repository.
-
-3. **Deploy to GitHub Pages**
-
-    Run the following command to deploy your app:
-
-    ```bash
-    npm run deploy
-    ```
-
-4. **Access Your Deployed App**
-
-    After successfully deploying, you can access your app at `https://yourusername.github.io/your-repo-name`.
-=======
-# Shriram-Deshmukh-Portfolio.github.io
->>>>>>> 98631a25a9326c2445ded8ba1e7796ef70fdd57a
+The site will be automatically deployed whenever you push to the main branch.

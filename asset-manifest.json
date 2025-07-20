@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Shriram-Deshmukh-Portfolio.github.io/static/css/main.12f80043.css",
+    "main.js": "/Shriram-Deshmukh-Portfolio.github.io/static/js/main.84fb889c.js",
+    "static/js/453.b45b8206.chunk.js": "/Shriram-Deshmukh-Portfolio.github.io/static/js/453.b45b8206.chunk.js",
+    "static/media/final image.png": "/Shriram-Deshmukh-Portfolio.github.io/static/media/final image.362edf2cd40c3a736209.png",
+    "static/media/BG DARK.png": "/Shriram-Deshmukh-Portfolio.github.io/static/media/BG DARK.bb5ea5d8e5f31c32faa9.png",
+    "static/media/profile image 1.png": "/Shriram-Deshmukh-Portfolio.github.io/static/media/profile image 1.f9b3326c878c5392bb52.png",
+    "static/media/project 1.png": "/Shriram-Deshmukh-Portfolio.github.io/static/media/project 1.2d9128b7ee4f4e54b3ee.png",
+    "static/media/project3.png": "/Shriram-Deshmukh-Portfolio.github.io/static/media/project3.b290bb8ddbf354497abb.png",
+    "static/media/BG LIGHT.png": "/Shriram-Deshmukh-Portfolio.github.io/static/media/BG LIGHT.38df744afda822290450.png",
+    "static/media/project 2.png": "/Shriram-Deshmukh-Portfolio.github.io/static/media/project 2.88f0aee968f09d53ef80.png",
+    "index.html": "/Shriram-Deshmukh-Portfolio.github.io/index.html",
+    "main.12f80043.css.map": "/Shriram-Deshmukh-Portfolio.github.io/static/css/main.12f80043.css.map",
+    "main.84fb889c.js.map": "/Shriram-Deshmukh-Portfolio.github.io/static/js/main.84fb889c.js.map",
+    "453.b45b8206.chunk.js.map": "/Shriram-Deshmukh-Portfolio.github.io/static/js/453.b45b8206.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12f80043.css",
+    "static/js/main.84fb889c.js"
+  ]
+}

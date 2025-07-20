@@ -1,11 +1,12 @@
 {
-  "name": "react-portfolio-template",
+  "name": "shriram-deshmukh-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yujisatojr.github.io/react-portfolio-template",
+  "homepage": "https://vshriram26.github.io/Shriram-Deshmukh-Portfolio.github.io",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
@@ -22,7 +23,7 @@
     "framer-motion": "^12.23.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.7.0",
+    "react-router-dom": "^6.30.1",
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.89.2",
     "typescript": "^4.9.5",
@@ -56,6 +57,7 @@
   },
   "devDependencies": {
     "@types/react-vertical-timeline-component": "^3.3.6",
+    "gh-pages": "^6.1.1",
     "react-scripts": "^5.0.1"
   }
 }

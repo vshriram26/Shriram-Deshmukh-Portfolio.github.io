@@ -1,0 +1,205 @@
+:root {
+  --project-title: #ffffff;
+  --project-text: #cbd5e0;
+  --project-link: #2563eb;
+  --project-background: rgba(255, 255, 255, 0.05);
+  --scroll-button: rgba(255, 255, 255, 0.1);
+  --scroll-button-hover: rgba(255, 255, 255, 0.2);
+  --scroll-icon: #ffffff;
+}
+
+.light-mode {
+  --project-title: #1a202c;
+  --project-text: #2d3748;
+  --project-link: #2563eb;
+  --project-background: rgba(255, 255, 255, 0.9);
+  --scroll-button: rgba(0, 0, 0, 0.1);
+  --scroll-button-hover: rgba(0, 0, 0, 0.2);
+  --scroll-icon: #000000;
+}
+
+.projects-container {
+    padding: 4rem 2rem;
+    position: relative;
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--project-title);
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.projects-scroll-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.projects-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 2rem;
+    padding: 1rem 0;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.project {
+    flex: 0 0 calc(50% - 1rem);
+    min-width: 350px;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background: var(--project-background);
+    text-align: left;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    h2 {
+        color: var(--project-title);
+        margin: 0.8rem 0;
+        font-size: 1.3rem;
+        line-height: 1.4;
+
+        &:hover {
+            color: var(--project-link);
+            text-decoration: underline;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+        }
+    }
+
+    p {
+        color: var(--project-text);
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+        font-size: 0.95rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .project-image-container {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        position: relative;
+        background-color: var(--project-background);
+        
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.project-timeline {
+    color: var(--project-link);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.zoom {
+    border-radius: 5px;
+    transition: transform .2s;
+    margin: 0 auto;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--scroll-button);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+
+    &:hover {
+        background: var(--scroll-button-hover);
+    }
+
+    &.left {
+        left: 0;
+    }
+
+    &.right {
+        right: 0;
+    }
+
+    svg {
+        color: var(--scroll-icon);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project {
+        flex: 0 0 calc(100% - 2rem);
+        min-width: 280px;
+
+        .project-image-container {
+            height: 180px;
+        }
+    }
+
+    .projects-container {
+        padding: 2rem 1rem;
+        
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project {
+        min-width: 260px;
+        padding: 0.8rem;
+
+        .project-image-container {
+            height: 160px;
+        }
+    }
+
+    .projects-scroll-container {
+        padding: 0 30px;
+    }
+
+    .scroll-button {
+        width: 35px;
+        height: 35px;
+
+        svg {
+            font-size: 0.9rem;
+        }
+    }
+}

@@ -1,0 +1,203 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#contact {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .section-title-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    .section-title {
+      position: relative;
+      color: var(--text-color);
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      margin-bottom: 0;
+    }
+
+    .subtitle {
+      color: var(--subtitle-color, #cbd5e0);
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+
+      &.visible {
+        animation: fadeInUp 0.8s ease 0.2s forwards;
+      }
+    }
+  }
+
+  .items-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.contact-info-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+// Responsive styles for section title
+@media (max-width: 768px) {
+  .section-title-container {
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title-container {
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+}
+
+.contact-card {
+  flex: 0 1 250px; // Fixed width for all cards
+  min-height: 200px; // Minimum height for all cards
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-decoration: none;
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin: 0; // Reset margins
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--icon-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    svg {
+      color: var(--icon-color);
+    }
+  }
+
+  h3 {
+    color: var(--card-text);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%; // Full width for consistent text alignment
+  }
+
+  p {
+    color: var(--card-subtext);
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+    width: 100%; // Full width for consistent text alignment
+    word-wrap: break-word; // Handle long text
+  }
+}
+
+.contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.contact-form {
+  padding-top: 20px;
+
+  button {
+    float: right;
+    background-color: white;
+    color: #050f0b;
+  }
+
+  button:hover {
+    background-color: #5000ca;
+    color: white;
+  }
+
+  fieldset {
+    background-color: white;
+  }
+}
+
+label {
+  font-size: 1.2rem;
+  font-family: 'DomaineDispNar-Medium', sans-serif;
+}
+
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.form-flex .MuiFormControl-root {
+  width: 100%;
+}
+
+form {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+// Update the root variables
+:root {
+  --text-color: #ffffff;
+  --background-color: rgba(255, 255, 255, 0.03);
+  --subtitle-color: #cbd5e0;
+  --card-background: rgba(255, 255, 255, 0.05);
+  --card-text: #ffffff;
+  --card-subtext: #cbd5e0;
+  --icon-background: rgba(37, 99, 235, 0.1);
+  --icon-color: #2563eb;
+}
+
+// Light mode styles
+.light-mode {
+  --text-color: #000000;
+  --background-color: rgba(0, 0, 0, 0.03);
+  --subtitle-color: #4a5568;
+  --card-background: rgba(255, 255, 255, 0.9);
+  --card-text: #1a202c;
+  --card-subtext: #4a5568;
+  --icon-background: rgba(37, 99, 235, 0.1);
+  --icon-color: #2563eb;
+}

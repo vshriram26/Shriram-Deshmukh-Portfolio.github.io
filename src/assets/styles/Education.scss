@@ -1,0 +1,293 @@
+:root {
+    --education-title-color: #ffffff;
+    --education-text-color: #ffffff;
+    --education-subtext-color: rgba(255, 255, 255, 0.8);
+    --education-description-color: rgba(255, 255, 255, 0.9);
+    --education-highlight-color: #ffffff;
+    --education-scroll-icon-color: #ffffff;
+    --education-block-icon-color: #2563eb;
+}
+
+.light-mode {
+    --education-title-color: #000000;
+    --education-text-color: #000000;
+    --education-subtext-color: rgba(0, 0, 0, 0.8);
+    --education-description-color: rgba(0, 0, 0, 0.9);
+    --education-highlight-color: #000000;
+    --education-scroll-icon-color: #000000;
+    --education-block-icon-color: #000000;
+
+    // Force FontAwesome icons to be black in light mode
+    .education-icon,
+    .location-icon,
+    .fa-university,
+    .fa-school,
+    .fa-graduation-cap,
+    .fa-map-marker-alt {
+        color: #000000 !important;
+    }
+}
+
+.education-container {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        color: var(--education-title-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.education-scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.education-grid {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.education-card {
+    min-width: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.education-duration {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .duration-icon {
+        font-size: 0.8rem;
+        color: white;
+    }
+}
+
+.education-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.education-icon {
+    color: var(--education-block-icon-color);
+    margin-top: 5px;
+}
+
+// Additional specificity for FontAwesome icons
+.education-card .education-icon,
+.education-card .location-icon {
+    color: var(--education-block-icon-color);
+}
+
+.education-title {
+    flex: 1;
+
+    h3 {
+        color: var(--education-title-color);
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        line-height: 1.3;
+    }
+
+    h4 {
+        color: var(--education-subtext-color);
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+.education-institution {
+    margin-bottom: 15px;
+
+    h4 {
+        color: var(--education-title-color);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+}
+
+.education-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--education-subtext-color);
+    font-size: 0.95rem;
+
+    .location-icon {
+        font-size: 0.85rem;
+        color: var(--education-block-icon-color);
+    }
+}
+
+.education-grade {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.education-description {
+    color: var(--education-description-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.education-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        position: relative;
+        color: var(--education-highlight-color);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        padding-left: 20px;
+
+        &::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+    }
+}
+
+.scroll-button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--education-scroll-icon-color);
+    z-index: 1;
+
+    &:hover {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+        transform: scale(1.1);
+    }
+
+    &.left {
+        margin-right: 10px;
+    }
+
+    &.right {
+        margin-left: 10px;
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .education-container {
+        padding: 60px 3%;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .education-card {
+        min-width: 280px;
+        padding: 20px;
+    }
+
+    .education-header {
+        gap: 15px;
+    }
+
+    .education-title {
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+    }
+
+    .scroll-button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-scroll-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .education-grid {
+        gap: 20px;
+    }
+
+    .education-card {
+        min-width: 250px;
+    }
+
+    .scroll-button {
+        display: none;
+    }
+}
